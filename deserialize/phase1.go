@@ -18,6 +18,26 @@ type Phase1 struct {
 	betaG2     curve.G2Affine
 }
 
+func (p1 *Phase1) TauG1() []curve.G1Affine {
+	return p1.tauG1
+}
+
+func (p1 *Phase1) AlphaTauG1() []curve.G1Affine {
+	return p1.alphaTauG1
+}
+
+func (p1 *Phase1) BetaTauG1() []curve.G1Affine {
+	return p1.betaTauG1
+}
+
+func (p1 *Phase1) TauG2() []curve.G2Affine {
+	return p1.tauG2
+}
+
+func (p1 *Phase1) BetaG2() curve.G2Affine {
+	return p1.betaG2
+}
+
 func ConvertPtauToPhase1(ptau Ptau) (phase1 Phase1, err error) {
 	tauG1 := make([]curve.G1Affine, len(ptau.PTauPubKey.TauG1))
 	for i, g1 := range ptau.PTauPubKey.TauG1 {
