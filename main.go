@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
+	deserializer "github.com/irfanbozkurt/ptau-deserializer/deserialize"
 	"github.com/urfave/cli/v2"
-	deserializer "github.com/worldcoin/ptau-deserializer/deserialize"
 )
 
 func main() {
